@@ -1,0 +1,111 @@
+/* Default styles for larger screens */
+.appbar {
+  background-color: #1e88e5;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  flex: 1;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 194px;
+  height: 143px;
+}
+
+.nav-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+  font-size: 20px;
+}
+.nav-links a:hover{
+  text-decoration: underline;
+  
+}
+
+
+/* Dropdown styles */
+.dropdown {
+  position: relative; /* Set the container as relative */
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+  opacity: 0; /* Initially hide the dropdown content */
+  visibility: hidden;
+  position: absolute;
+  background-color: #14bdce;
+  text-align: left; 
+  min-width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  z-index: 1;
+  text-decoration: underline;
+  transform: translateY(10px); /* Move it down and fade it in */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the dropdown content when .dropdown is hovered */
+.dropdown:hover .dropdown-content {
+  opacity: 1; /* Fade in */
+  visibility: visible;
+  transform: translateY(0); /* Move back to its original position */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown content when hovering over the container */
+}
+
+.social-icons a {
+  color: #000;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 35px;
+}
+
+.social-icons a:hover {
+  filter: grayscale(100%);
+}
+
+/* Responsive styles for Android */
+@media screen and (max-width: 768px) {
+  .appbar {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+}
+

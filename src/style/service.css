@@ -1,0 +1,84 @@
+/* Default styles for larger screens */
+.our-service {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(197, 197, 239);
+}
+
+.side-left-div {
+  width: 30%;
+}
+
+#text {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 60%;
+}
+
+h1 {
+  margin-right: 32%;
+}
+
+.side-right-div {
+  width: 70%;
+}
+
+/* Style for the top three boxes (1, 2, 3) */
+.service-box {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: #f0f0f0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Style for the bottom three boxes (4, 5, 6) */
+.box:nth-child(n+4) {
+  margin-top: 20px;
+}
+
+.service-box:hover {
+  background-color: #1560d8;
+  color: white;
+  cursor: pointer;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media query for smaller screens (adjust the max-width as needed) */
+@media (max-width: 768px) {
+  .our-service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .side-left-div, .side-right-div {
+    width: 100%;
+  }
+
+  #text {
+    margin-right: 0;
+  }
+
+  h1 {
+    margin-right: 0;
+  }
+
+  .service-box {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}

@@ -1,0 +1,64 @@
+/* Common styles for both Android and desktop */
+.footer {
+  width: 100%;
+  background-color: #1e88e5;
+  color: #fff;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch; /* Ensure divs stretch vertically */
+}
+
+.footer-one, .footer-two, .footer-three {
+  flex: 1; /* Equal flex property for all divs to share the available space */
+  background-color: transparent; /* You can change the background color as needed */
+  text-align: left;
+  padding: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-three {
+  flex: 2; /* Twice the flex property for the third div to make it 40% width */
+  background-color: transparent; /* You can change the background color as needed */
+}
+
+/* Style headings and lists */
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+ul li a:hover {
+  color: #1e88e5;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-one, .footer-two, .footer-three {
+    flex: 1;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
